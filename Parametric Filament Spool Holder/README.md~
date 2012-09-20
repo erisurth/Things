@@ -1,0 +1,25 @@
+Parametric Spool Holder
+=======================
+
+Description
+-----------
+
+This thing is designed to fit inside a filament spool, and attach it by way of a bearing to a piece of M8 threaded rod.
+
+It is parametric, so the outer diameter can easily be changed to suit different spool types. 
+
+Instructions
+------------
+
+0. You may need to adjust the parameters and re-render the scad file before printing, depending on the internal diameter fo your spool.
+1. Print 2x pieces the correct diameter
+2. Fix a 608 bearing in the central bearing hole of each using m3 or m4 bolts.
+3. Use a nut on each side to hold the whole thing together on a piece of m8 threaded rod.
+
+Tools
+-----
+* RepRap or similar 3D Printer
+
+License
+-------
+Creative Commons CC-by-SA http://creativecommons.org/licenses/by-sa/3.0/
