@@ -39,15 +39,13 @@ module tower(h)
   }
 }
 
-scale([0.3, 0.3, 0.5])
+
+difference()
 {
-	difference()
+	union()
 	{
-		union()
-		{
-			translate([0,45,0]) tower(3);
-			flame(6);
-		}
-		translate([20,-20,-1])cylinder(h=8, r=3);
+		translate([0,45,0]) tower(3);
+		flame(6);
 	}
+	translate([20,-20,-1])cylinder(h=8, r=3);
 }
