@@ -23,15 +23,20 @@ difference()
 		translate ([25, (i*70)+6+35, -0.5]) rotate([90, 0, 180]) prism(21,20,20);
 		translate ([5, ((i+1)*70), -0.5]) rotate([90, 0, 0]) prism(21,20,20);
 	}
-	translate([15,-1,37.5]) rotate([-90,0,0]) cylinder(r=20, h=190);
+	translate([15,6,20]) rotate([-90,0,0]) cylinder(r=(20/2), h=134);
+
 	translate([0, -7.5, 7.5 ]) rotate([0, 90, 0]) cylinder(r=2.5, h=30);
 
-	for (x = [0,1])
+	for (x = [-8 ,8])
 	{
-		for (y = [0, 1])
+		for (y = [-8, 8])
 		{
-			translate([(x*16)+7, (y*16)+146, -0.1]) cylinder(r=1.6, h=40);
-			translate([(x*16)+7, (y*16)+146, 10]) cylinder(r=5.5 / 2 / cos(180 / 6) + 0.05, h=20, $fn=6);
+			translate([(x)+15, y+154, -0.1])
+			union()
+			{
+				cylinder(r=1.6, h=40);
+				translate([0, 0, 7]) cylinder(r=5.5 / 2 / cos(180 / 6) + 0.05, h=20, $fn=6);
+			}
 		}
 	}
 	
