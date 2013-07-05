@@ -17,8 +17,12 @@ module body ()
 		translate([-60, -60, 0]) cube([120, 120, 25]);
 
 		// things there are one of
-		translate([0, 0, -1]) cylinder (r=20, h=27);
-		translate([0, 0, 10]) cylinder (r=30, h=27);
+		translate([0, 0, -1]) cylinder (r=8, h=27);
+		difference()
+		{
+		    translate([0, 0, 10]) cylinder (r=30, h=27);
+            for(r = [0, 90, 180, 270]) rotate([0, 0, r]) translate ([35/2, 35/2, -1]) cylinder(r=3, h=13);
+        }
 
 		// things there are four of
 		for(r = [0, 90, 180, 270])
@@ -42,8 +46,8 @@ module body ()
 			    translate([-61, -16, -1]) prism(32, 7, 7);
 			    
 			    // holes for pcb mount
-			    translate ([35/2, 35/2, -1]) cylinder(r=5.5 / 2 / cos(180 / 6) + 0.05, h=7, $fn=6);
-			    translate ([35/2, 35/2, 5.9]) cylinder(r1=5.5 / 2 / cos(180 / 6) + 0.05, r2=0, h=3, $fn=6);
+			    translate ([35/2, 35/2, -1]) cylinder(r=5.5 / 2 / cos(180 / 6) + 0.05, h=8, $fn=6);
+			    translate ([35/2, 35/2, 6.9]) cylinder(r1=5.5 / 2 / cos(180 / 6) + 0.05, r2=0, h=3, $fn=6);
 			    translate ([35/2, 35/2, -1]) cylinder(r=1.6, h=40);
 			}
 		}
