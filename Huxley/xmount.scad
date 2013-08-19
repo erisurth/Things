@@ -1,3 +1,5 @@
+$fn = 50;
+
 module xc()
 {
 	difference()
@@ -23,7 +25,8 @@ module xc()
 		translate([25,0,0]) cylinder(r=2, h=5.5, center=true);
 		translate([-25,0,0]) cylinder(r=2, h=5.5, center=true);
 	
-		cylinder(r=4.25, h=6, center=true);
+		cylinder(r=4.75, h=6, center=true);
+		translate([0,0,3]) cylinder(r=5, h=6, center=true);
 	}
 }
 

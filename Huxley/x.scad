@@ -7,7 +7,7 @@ translate([0,0,9]) rotate([0,180,0])
 	%translate([15, 0, 0]) rotate([90,0,0]) cylinder(r=3, h=120, center=true);
 	%translate([-15, 0, 0]) rotate([90,0,0]) cylinder(r=3, h=120, center=true);
 	%translate([36, 0, 0])  cube([2.5, 120, 5], center=true);
-	#translate([0,0,11.5]) xc();
+	%translate([0,0,11.5]) xc();
 
 	difference()
 	{
