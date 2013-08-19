@@ -1,10 +1,13 @@
 $fs = 0.5;
 
+use <xmount.scad>;
+
 translate([0,0,9]) rotate([0,180,0])
 {
 	%translate([15, 0, 0]) rotate([90,0,0]) cylinder(r=3, h=120, center=true);
 	%translate([-15, 0, 0]) rotate([90,0,0]) cylinder(r=3, h=120, center=true);
 	%translate([36, 0, 0])  cube([2.5, 120, 5], center=true);
+	#translate([0,0,11.5]) xc();
 
 	difference()
 	{
@@ -68,8 +71,8 @@ translate([0,0,9]) rotate([0,180,0])
 		translate([20+15, 7.5, 8]) cube([16, 4, 2], center=true);
 	}
 		//supports
-		translate ([0,0,6.5]) cylinder(r=12.6/2, h=5, center=true); 
-		translate ([0,12.6/4,6.5]) cube([12.6, 12.6/2, 5], center=true);
+		*translate ([0,0,6.5]) cylinder(r=12.6/2, h=5, center=true); 
+		*translate ([0,12.6/4,6.5]) cube([12.6, 12.6/2, 5], center=true);
 
 }
 
