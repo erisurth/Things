@@ -50,7 +50,7 @@ module arm($show_blades=false)
     	    translate([30, -16, 16]) rotate([0,90,90]) prism(32, 6, 6);
 	    }	
 	}	
-    if ($show_blades==true) color([0.2, 0.2, 0.2, 0.5]) translate([0, 170, 30]) cylinder(r=100, h=5);	    
+    if ($show_blades==true) color([0.2, 0.2, 0.2, 0.5]) translate([0, 170, -10]) cylinder(r=100, h=5);	    
 }
 
-if ($render_included!=false) arm(true);
+if ($render_included!=false) arm();
